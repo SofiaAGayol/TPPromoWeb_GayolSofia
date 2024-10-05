@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +15,26 @@ namespace TPPromoWeb
         {
 
         }
+
+        protected void botonValidar_Click(object sender, EventArgs e)
+        {
+            Voucher voucher;
+            VoucherNegocio voucherNegocio = new VoucherNegocio() ;
+            //Codigo ingresado en el txt
+            string codigoVoucher = validacionVoucher.Text;
+
+            //Uso el validador
+            if (voucherNegocio.ValidarVoucher(codigoVoucher))
+            {
+                Response.Redirect("Premios.aspx");
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Este código es inválido o ya ha sido utilizado.');", true);
+            }
+        }
+
+        
+
     }
 }

@@ -15,12 +15,21 @@ namespace TPPromoWeb
     {
 
         /// <summary>
-        /// Control validationTooltip05.
+        /// Control validacionVoucher.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox validationTooltip05;
+        protected global::System.Web.UI.WebControls.TextBox validacionVoucher;
+
+        /// <summary>
+        /// Control botonValidar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button botonValidar;
     }
 }

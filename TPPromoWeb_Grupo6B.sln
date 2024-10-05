@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPPromoWeb", "TPPromoWeb\TPPromoWeb.csproj", "{E79C7758-381B-4612-8E20-B6C5841063A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "..\..\..\Proyecto 2\RepoGitHub\PROGIII_PROYECTO2\SolucionTPWinForm\dominio\dominio.csproj", "{3206D872-DDB8-4DED-A62A-37E214C67345}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "..\..\..\Proyecto 2\RepoGitHub\PROGIII_PROYECTO2\SolucionTPWinForm\negocio\negocio.csproj", "{5AD57415-5A17-4707-8A49-A11501E30641}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E79C7758-381B-4612-8E20-B6C5841063A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E79C7758-381B-4612-8E20-B6C5841063A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E79C7758-381B-4612-8E20-B6C5841063A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3206D872-DDB8-4DED-A62A-37E214C67345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3206D872-DDB8-4DED-A62A-37E214C67345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3206D872-DDB8-4DED-A62A-37E214C67345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3206D872-DDB8-4DED-A62A-37E214C67345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD57415-5A17-4707-8A49-A11501E30641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD57415-5A17-4707-8A49-A11501E30641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD57415-5A17-4707-8A49-A11501E30641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD57415-5A17-4707-8A49-A11501E30641}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
