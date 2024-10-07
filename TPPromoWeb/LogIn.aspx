@@ -70,7 +70,7 @@
 
 
                 <div class="col-12">
-                    <asp:Button ID="btnParticipar" class="btn btn-primary" type="submit" runat="server" Text="PARTICIPAR" />
+                    <asp:Button ID="btnParticipar" class="btn btn-primary" type="submit" runat="server" Text="PARTICIPAR" OnClick="btnParticipar_Click" />
                 </div>
 
             </div>

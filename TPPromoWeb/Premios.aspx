@@ -10,11 +10,11 @@
             <ItemTemplate>
                 <div class="col">
                     <div class="card h-100">
-                        <asp:Image ID="Image1" src="<% %>" alt="..." runat="server" />
+                        <asp:Image ID="Image1" alt="Imagen del artículo" runat="server" CssClass="card-img-top" />
                         <div class="card-body">
-                            <h5 class="card-title"><%#Eval("Nombre") %></h5>
-                            <p class="card-text"><%#Eval("Descripcion") %></p>
-                            <asp:Button ID="botonElegir" class="btn btn-primary" type="submit" runat="server" c Text="¡QUIERO ESTE!" OnClick="botonElegir_Click" />
+                            <h5 class="card-title"><%# Eval("Nombre") %></h5>
+                            <p class="card-text"><%# Eval("Descripcion") %></p>
+                            <asp:Button ID="botonElegir" class="btn btn-primary" runat="server" Text="¡QUIERO ESTE!" CommandArgument='<%# Eval("Id") %>' OnClick="botonElegir_Click" />
                         </div>
                     </div>
                 </div>
@@ -25,3 +25,4 @@
     <hr />
 
 </asp:Content>
+

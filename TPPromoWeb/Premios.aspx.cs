@@ -47,11 +47,9 @@ namespace TPPromoWeb
 
             if (voucher != null)
             {
-                //Agregp el articulo al voucher y lo guardo
                 voucher.IdArticulo = idArticuloSeleccionado;
                 Session["voucherActual"] = voucher;
 
-                // Buscar el nombre del artículo seleccionado
                 Articulo articuloSeleccionado = ListaArticulos.FirstOrDefault(a => a.Id == idArticuloSeleccionado);
 
                 if (articuloSeleccionado != null)
