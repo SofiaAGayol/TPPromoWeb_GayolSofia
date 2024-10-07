@@ -3,25 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="row row-cols-1 row-cols-md-3">
-
-        <%--<%
-            foreach (dominio.Articulo art in ListaArticulos)
-            {
-        %>
-
-        <div class="col">
-            <div class="card card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><%:art.Nombre %></h5>
-                    <p class="card-text"><%:art.Descripcion %></p>
-                    <a href="Login.aspx?Id=<%:art.Id %>" class="btn btn-primary">¡QUIERO ESTE!</a>
-                </div>
-            </div>
-        </div>
-
-        <% } %>--%>
 
         <asp:Repeater ID="RepeaterArticulos" runat="server">
             <ItemTemplate>
@@ -31,7 +14,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("Nombre") %></h5>
                             <p class="card-text"><%#Eval("Descripcion") %></p>
-                            <asp:Button id="Boton1" class="btn btn-primary" type="submit" runat="server" CommandArgument='<%#Eval("Id")%>' CommandName="ArticuloId" Text="¡QUIERO ESTE!" Onclick="Boton1_Click"/>
+                            <asp:Button ID="botonElegir" class="btn btn-primary" type="submit" runat="server" c Text="¡QUIERO ESTE!" OnClick="botonElegir_Click" />
                         </div>
                     </div>
                 </div>
@@ -39,4 +22,6 @@
         </asp:Repeater>
 
     </div>
+    <hr />
+
 </asp:Content>

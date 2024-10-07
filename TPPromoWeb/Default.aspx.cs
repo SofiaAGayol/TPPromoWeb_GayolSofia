@@ -19,22 +19,32 @@ namespace TPPromoWeb
         protected void botonValidar_Click(object sender, EventArgs e)
         {
             Voucher voucher;
-            VoucherNegocio voucherNegocio = new VoucherNegocio() ;
+            VoucherNegocio voucherNegocio = new VoucherNegocio();
             //Codigo ingresado en el txt
             string codigoVoucher = validacionVoucher.Text;
 
-            //Uso el validador
-            if (voucherNegocio.ValidarVoucher(codigoVoucher))
+            try
             {
-                Response.Redirect("Premios.aspx");
+                voucher = new Voucher(codigoVoucher,0,null,0);
+
+                //Uso el validador
+                if (voucherNegocio.ValidarVoucher(voucher))
+                {
+                    Session["voucherActual"] = voucher;
+                    Response.Redirect("Premios.aspx");
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Este código es inválido o ya ha sido utilizado.');", true);
+                }
+
             }
-            else
+            catch (Exception)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Este código es inválido o ya ha sido utilizado.');", true);
+
+                throw;
             }
+
         }
-
-        
-
     }
 }
