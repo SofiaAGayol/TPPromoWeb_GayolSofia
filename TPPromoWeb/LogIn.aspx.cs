@@ -68,9 +68,8 @@ namespace TPPromoWeb
 
             int dniCliente = Convert.ToInt32(txtDNI.Text);
             ClienteNegocio clienteNegocio = new ClienteNegocio();
-            
-            List<Cliente> clientes = clienteNegocio.buscarPorDNI(dniCliente);
-            Cliente cliente = clientes.FirstOrDefault();
+
+            Cliente cliente = null;
 
             if (cliente == null)
             {                
@@ -86,6 +85,9 @@ namespace TPPromoWeb
                 };
 
                 clienteNegocio.agregarCliente(cliente);
+
+                List<Cliente> clientes = clienteNegocio.buscarPorDNI(dniCliente);
+                cliente = clientes.FirstOrDefault();
 
                 voucher.IdCliente = cliente.Id;
                 Session["voucherActual"] = voucher;
